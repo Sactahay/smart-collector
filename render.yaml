@@ -25,15 +25,5 @@ services:
           name: smart-collector-db
           property: connectionString
 
-  - type: static_site
-    name: smart-collector-frontend
-    buildCommand: |
-      npm install
-      npm run build
-    staticPublishPath: build
-    envVars:
-      - key: REACT_APP_API_URL
-        value: "https://smart-collector-backend.onrender.com/api"
-
 databases:
   - name: smart-collector-db
